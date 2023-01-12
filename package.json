@@ -1,0 +1,24 @@
+{
+  "name": "mern-stack-social-media",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "SET DEBUG=mern-stack-social-media:* & npm run dev"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "helmet": "^6.0.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.8.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

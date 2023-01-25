@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
 /* GET auth listing.
 router.get('/', function (req, res, next) {
@@ -8,7 +7,7 @@ router.get('/', function (req, res, next) {
 */
 
 //Register
-router.get('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
     res.send('respond with a resource');
 });
 

@@ -1,13 +1,11 @@
 const router = require('express').Router();
-
-/* GET auth listing.
-router.get('/', function (req, res, next) {
-    res.send('respond with a resource');
-});
-*/
+const User = require('../models/User');
 
 //Register
-router.post('/', function (req, res, next) {
+router.post('/register', async (req, res, next) => {
+    const user = await new User({
+
+    });
     res.send('respond with a resource');
 });
 

@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect(process.env.MONGODB_URL, {useNew})
+mongoose.connect(process.env.MONGODB_URL, { useNew })
 
 app.use('/api/v1', indexRouter);
 

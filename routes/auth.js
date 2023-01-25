@@ -1,12 +1,51 @@
 const router = require('express').Router();
 const User = require('../models/User');
+const bcrypt = require('bcrypt');
 
 //Register
 router.post('/register', async (req, res, next) => {
-    const user = await new User({
+    try {
+        //Generate Hashed password.
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-    });
-    res.send('respond with a resource');
+        //Create new user.
+        const newUser = await new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword,
+        });
+
+        //Save User to db and return response.
+        const user = await newUser.save();
+        res.status(200).json(user);
+    } catch (error) {
+        console.log(error);
+    }
+    res.send('ok');
+});
+
+//Login
+router.post('/register', async (req, res, next) => {
+    try {
+        //Generate Hashed password.
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+        //Create new user.
+        const newUser = await new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: hashedPassword,
+        });
+
+        //Save User to db and return response.
+        const user = await newUser.save();
+        res.status(200).json(user);
+    } catch (error) {
+        console.log(error);
+    }
+    res.send('ok');
 });
 
 module.exports = router;

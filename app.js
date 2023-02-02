@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true }, () => {
   console.log('DB Connected!');
-})
+});
 
 app.use('/api/v1', indexRouter);
 

@@ -1,0 +1,26 @@
+{
+  "name": "mern-stack-social-media",
+  "version": "1.0.0",
+  "description": "An all inclusive utility platform for Updawg",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astitvsingh/mern-stack-social-media.git"
+  },
+  "keywords": [
+    "mern",
+    "mern-stack",
+    "full-stack",
+    "web",
+    "app"
+  ],
+  "author": "Astitv Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/astitvsingh/mern-stack-social-media/issues"
+  },
+  "homepage": "https://github.com/astitvsingh/mern-stack-social-media#readme"
+}
